@@ -1,0 +1,236 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: hsl(30, 38%, 92%);
+	margin: 0;
+	font-size: 1.25vw;
+}
+
+main {
+	/* border: 1px solid blue; */
+	border-radius: 2%;
+	width: 35vw;
+	height: 26.25vw; /* h = 3w/4 */
+}
+div {
+	/* border: 1px solid black; */
+	border-radius: 2%;
+	width: 100%;
+	height: 100%;
+}
+/* For mobile */
+@media screen and (max-width: 375px) {
+	body {
+		font-size: 3.9vw;
+	}
+	main {
+		/* border: 1px solid blue; */
+		border-radius: 3%;
+		width: 61.5vw;
+		height: fit-content;
+		margin: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	div {
+		/* border: 1px solid greenyellow; */
+		border-radius: 3%;
+	}
+}
+
+/* Sections styling */
+
+/* Styling section A */
+section#product-image {
+	/* border: 1px solid red; */
+	width: 50%;
+	line-height: 0;
+}
+section#product-image img#mobile {
+	display: none;
+}
+section#product-image img#desktop {
+	width: 100%;
+	height: auto;
+	border-top-left-radius: 2%;
+	border-bottom-left-radius: 2%;
+	/* vertical-align: bottom; */
+}
+/* For mobile */
+@media screen and (max-width: 375px) {
+	section#product-image {
+		/* border: 1px solid purple; */
+		display: revert;
+		width: 100%;
+		height: fit-content;
+	}
+	section#product-image img#mobile {
+		display: initial;
+		width: 100%;
+		border-top-left-radius: 3%;
+		border-top-right-radius: 3%;
+	}
+	section#product-image img#desktop {
+		display: none;
+	}
+}
+
+section#description {
+	background-color: rgb(255, 255, 255);
+	padding: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	line-height: 1;
+	vertical-align: middle;
+	height: 100%;
+}
+section#description header {
+	color: hsl(228, 12%, 48%);
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 60%;
+	letter-spacing: 3px;
+}
+section#description footer {
+	color: white;
+	background-color: hsl(158, 36%, 37%);
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-size: 60%;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 2;
+	width: 100%;
+	padding: 5% 0%;
+}
+section#description footer img {
+	width: 5%;
+	height: auto;
+}
+span.add-item {
+	display: inline-block;
+	margin-left: 2%;
+}
+h1#perfume-name {
+	color: hsl(212, 21%, 14%);
+	font-family: "Fraunces";
+	font-weight: 700;
+	padding-right: 5%;
+}
+p#overview {
+	color: hsl(228, 12%, 48%);
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 70%;
+	line-height: 1.5;
+}
+p.price-list {
+	position: relative;
+}
+span.discount-price {
+	font-family: "Fraunces";
+	font-size: 150%;
+	color: hsl(158, 36%, 37%);
+}
+span.actual-price {
+	color: hsl(228, 12%, 48%);
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 65%;
+	text-decoration-line: line-through;
+	display: inline-block;
+	position: absolute;
+	bottom: 20%;
+	left: calc(60%);
+}
+/* For mobile */
+@media screen and (max-width: 375px) {
+	section#description {
+		/* border: 1px solid black; */
+		box-sizing: border-box;
+		padding: 7% 6%;
+		display: revert;
+		width: 100%;
+		height: fit-content;
+	}
+	section#description header {
+		margin: 0%;
+	}
+	h1#perfume-name {
+		margin: 3.5% 0;
+	}
+	p#overview {
+		font-size: 65%;
+		padding: 0 1% 0 0;
+	}
+
+	span.actual-price {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+	}
+	section#description footer {
+		position: relative;
+		padding: 3.5% 0;
+	}
+	img.shopping-cart {
+		position: absolute;
+		top: 32%;
+		left: 29%;
+	}
+}
+
+/* For tabular display */
+.table-container {
+	display: table;
+	border-radius: 2%;
+}
+.table-row {
+	display: table-row;
+	border-radius: 2%;
+}
+.table-column {
+	display: table-cell;
+	vertical-align: top;
+	height: 100%;
+	border-radius: 2%;
+}
+/* For tabular display mobile */
+@media screen and (max-width: 375px) {
+	.table-container,
+	.table-row,
+	.table-column {
+		display: initial;
+		border-radius: 3%;
+	}
+
+	.mob-first-row {
+		border-bottom-left-radius: 0%;
+		border-bottom-right-radius: 0%;
+	}
+	.mob-second-row {
+		border-top-left-radius: 0%;
+		border-top-right-radius: 0%;
+	}
+}
+
+/* Footer */
+.attribution {
+	font-size: 65%;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
