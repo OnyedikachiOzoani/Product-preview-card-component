@@ -43,7 +43,7 @@ For the _desktop design_, I've set it to be visible when the **viewport width is
 ## Issues faced when building the project
 
 1. Getting the product image and the product description parts to stack together  
-   horizontally whist maintaining the aspect-ratio od the image using `display: table`.
+   horizontally whist maintaining the aspect-ratio of the image using `display: table`.
    View my question and its answer on StackOverflow: [Question](https://stackoverflow.com/questions/76793682/css-height-property-not-working-for-display-table).
 
 2. Writing conditions for media query rules for targetting devices within a particular  
